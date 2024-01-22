@@ -5,9 +5,8 @@ body{
   display: flex;
   justify-content: center;
   align-items: center;
-  /* width: 100%;
-  height: 100%; */
-  
+  width: 100%;
+  height: 100vh;
 }
 .main {
  background-color: #AAD7D9;
@@ -17,8 +16,8 @@ body{
  align-items: center ;
  justify-content: center;
  flex-direction: column;
-
- 
+ border-radius: 20px;
+ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .heading {
@@ -28,6 +27,7 @@ body{
   width: 20vh;
   border: 1px solid #FBF9F1;
   border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .heading2 {
@@ -50,6 +50,7 @@ body{
   height: 15vh;
   border: 1px solid #FBF9F1;
   border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .add-area{
@@ -63,14 +64,14 @@ body{
   border: 2px solid black;
 }
 
-.add-btn {
+.add-btn.css-sghohy-MuiButtonBase-root-MuiButton-root {
   width: 10vh;
   background-color: black;
   color: white;
   border: 2px solid black;
 }
 
-.add-btn:hover {
+.add-btn.css-sghohy-MuiButtonBase-root-MuiButton-root:hover {
   background-color: black;
   color: white;
   cursor: pointer;
@@ -80,20 +81,22 @@ body{
   display: flex;
   justify-content: center;
   margin: 2vh;
+  
 }
 .filter-btns {
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 2vh;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .filter-btn.css-1rwt2y5-MuiButtonBase-root-MuiButton-root {
-
   background-color: #E5E1DA;
   color: #1d555e;
   border-color: #1d555e;
 }
+
 .filter-btn.css-1rwt2y5-MuiButtonBase-root-MuiButton-root:hover{
   border-color: #4d4d4d;
   background-color: #E5E1DA;
@@ -116,6 +119,7 @@ body{
   background-color: #FBF9F1;
   border: 1px solid #FBF9F1;
   border-radius: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   
 }
 
@@ -128,6 +132,7 @@ body{
   justify-content: space-between;
   align-items: center;
   width: 100%;
+  margin: 5px;
 }
 
 
@@ -140,6 +145,7 @@ body{
   top: -2px;
   cursor: pointer;
   z-index: 1;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .task {
@@ -149,6 +155,7 @@ body{
   margin-right: 2vh;
   margin-bottom: 1vh;
   font-size: large;
+  
 }
 
 .btn-group {
@@ -171,6 +178,10 @@ body{
   padding: 5px;
   width: 12vh;
   height: 4vh;
+}
+
+.delete-btn.css-sghohy-MuiButtonBase-root-MuiButton-root:hover {
+  background-color: #ca3c3c;
 }
 
 .editing{

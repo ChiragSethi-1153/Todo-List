@@ -1,6 +1,7 @@
 import React from "react";
 import { useState } from "react";
 import '../App.css'
+import { Button } from "@mui/material";
 
 function Form(prop) {
   const [name, setName] = useState("");
@@ -18,7 +19,7 @@ function Form(prop) {
       <form className="add-form" onSubmit={handleSubmit}>
         <h2>
           <label htmlFor="new-todo-input" className="heading2">
-             Add Task
+             Add Your Task
           </label>
         </h2>
         <div className="add-area">
@@ -32,9 +33,9 @@ function Form(prop) {
           onChange={handleChange}
           required
         />
-        <button type="submit" className="add-btn">
-          Add
-        </button>
+
+        <Button variant="contained" type="submit" className="add-btn">Add</Button>
+        
         </div>
       </form>
     </div>

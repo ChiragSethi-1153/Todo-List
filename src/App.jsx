@@ -2,7 +2,7 @@ import Todo from "./components/Todo";
 import Form from "./components/Form";
 import Filter from "./components/Filter";
 import { useState, useEffect } from "react";
-import {nanoid} from "nanoid";
+import { nanoid } from "nanoid";
 import "./App.css";
 
 
@@ -16,6 +16,8 @@ const Filter_Map = {
 const Filter_Names = Object.keys(Filter_Map);
 
 
+
+/* APP Function */
 function App(props) {
 
   const [tasks, setTasks] = useState(props.tasks);
@@ -34,16 +36,16 @@ function App(props) {
   ));
 
   const filterList = Filter_Names.map((name) => (
-    <Filter 
-    key={name} 
-    name={name} 
-    isPressed={name === filter}
-    setFilter={setFilter}
+    <Filter
+      key={name}
+      name={name}
+      isPressed={name === filter}
+      setFilter={setFilter}
     />
   ));
 
   const tasksNoun = taskList.length !== 1 ? "tasks" : "task";
-const headingText = `${taskList.length} ${tasksNoun} remaining`
+  // const headingText = `${taskList.length} ${tasksNoun} remaining`
 
   function addTask(name) {
     const newTask = { id: `todo-${nanoid()}`, name, completed: false };
@@ -52,8 +54,8 @@ const headingText = `${taskList.length} ${tasksNoun} remaining`
 
   function toggleTaskCompleted(id) {
     const updatedTasks = tasks.map((task) => {
-      if(id === task.id) {
-        return { ...task, completed: !task.completed};
+      if (id === task.id) {
+        return { ...task, completed: !task.completed };
       }
       return task;
     });
@@ -67,16 +69,16 @@ const headingText = `${taskList.length} ${tasksNoun} remaining`
 
   function editTask(id, newName) {
     const editedTaskList = tasks.map((task) => {
-      if(id === task.id){
-        return { ...task, name: newName};
+      if (id === task.id) {
+        return { ...task, name: newName };
       }
 
       return task;
     });
     setTasks(editedTaskList);
-    }
+  }
 
-  
+
 
   return (
     <div className="main">
