@@ -20,6 +20,7 @@ const Filter_Names = Object.keys(Filter_Map);
 /* APP Function */
 function App(props) {
 
+  
   const [tasks, setTasks] = useState(props.tasks);
   const [filter, setFilter] = useState("All");
 
